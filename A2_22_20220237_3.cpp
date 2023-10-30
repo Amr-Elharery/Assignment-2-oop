@@ -13,7 +13,7 @@
 using namespace std;
 
 
-vector<string> split(const string& target, char delimiter);
+vector<string> split( string target, char delimiter);
 
 int main()
 {
