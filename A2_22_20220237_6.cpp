@@ -9,6 +9,7 @@
 
 using namespace std;
 void binaryPrint(int n);
+void numbers(string prefix, int k);
 
 int main()
 {
@@ -17,6 +18,9 @@ int main()
   binaryPrint(4);
   cout << endl;
   binaryPrint(27);
+  cout << endl;
+
+  numbers("00101",2);
   return 0;
 }
 
@@ -29,4 +33,14 @@ void binaryPrint(int n)
   else{
     cout<< 0;
   }
+}
+
+void numbers(string prefix, int k) {
+  if (k == 0) {
+    cout << prefix << endl;
+    return;
+  }
+
+  numbers(prefix + "0", k - 1);
+  numbers(prefix + "1", k - 1);
 }
