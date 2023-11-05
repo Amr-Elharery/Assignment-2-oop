@@ -64,3 +64,18 @@ bool BigReal::operator > (BigReal& anotherReal) {
         return false;
     }
 }
+
+bool BigReal::operator < (BigReal& anotherReal) {
+    if(integer<anotherReal.integer){
+        return true;
+    }
+    else if(integer>anotherReal.integer){
+        return false;
+    }
+    else {
+        if(fraction<anotherReal.fraction){
+            return true;
+        }
+        return false;
+    }
+}

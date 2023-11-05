@@ -10,7 +10,11 @@ int main()
 
     if(b > c)
     {
-        cout << "B Is > C";
+        cout << "B Is > C" << endl;
+    }
+    if(b < c)
+    {
+        cout << "B Is < C" << endl;
     }
 
     return 0;

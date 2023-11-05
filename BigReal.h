@@ -12,6 +12,9 @@ public:
     BigReal(string& num);
 
     bool operator > (BigReal& anotherReal);
+    bool operator < (BigReal& anotherReal);
+
+
     friend ostream& operator<<(ostream& out,BigReal& real);
 };
 
