@@ -1,3 +1,10 @@
+// File: solve problem 1.cpp
+// Purpose: Files.
+// Author: Ashraf Abdallah Elmamouni.
+// Section: 22.
+// ID: 20220062.
+// TA: Eng / Rana Abd Elkader.
+
 #include <iostream>
 using namespace std;
 
