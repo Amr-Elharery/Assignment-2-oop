@@ -4,24 +4,28 @@ using namespace std;
 
 int main()
 {
-    string s,s2;
-    cin >> s>>s2;
-    BigReal b(s),c(s2);
+    string s1,s2;
+    cout << "Enter Number one: "<< endl;
+    cin >> s1;
+    cout << "Enter Number two: "<< endl;
+    cin >> s2;
 
-    cout << "b " << b << endl;
-    cout << "c " << c << endl;
+    BigReal num1 = s1,num2 = s2;
 
-    if(b > c)
+    cout << "Number 1 " << num1 << endl;
+    cout << "Number 2 " << num2 << endl;
+
+    if(num1 > num2)
     {
-        cout << "B Is > C" << endl;
+        cout << "Number 1 Is > Number 2" << endl;
     }
-    if(b < c)
+    if(num1 < num2)
     {
-        cout << "B Is < C" << endl;
+        cout << "Number 1 Is < Number 2" << endl;
     }
 
-    if ( b == c){
-        cout << "B Is = C" << endl;
+    if ( num1 == num2){
+        cout << "Number 1 Is = Number 2" << endl;
     }
 
     return 0;
