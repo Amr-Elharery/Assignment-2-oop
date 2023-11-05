@@ -7,6 +7,11 @@ int main()
     string s,s2;
     cin >> s>>s2;
     BigReal b(s),c(s2);
-    cout<<d;
+
+    if(b > c)
+    {
+        cout << "B Is > C";
+    }
+
     return 0;
 }

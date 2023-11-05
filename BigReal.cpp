@@ -50,7 +50,7 @@ ostream& operator<<(ostream& out,BigReal& real){
     return out;
 }
 
-bool BigReal::operator >(BigReal& anotherReal) {
+bool BigReal::operator > (BigReal& anotherReal) {
     if(integer>anotherReal.integer){
         return true;
     }
@@ -63,5 +63,4 @@ bool BigReal::operator >(BigReal& anotherReal) {
         }
         return false;
     }
-    return false;
 }
