@@ -45,7 +45,23 @@ BigReal::BigReal(string &num)
     }
 }
 
-void BigReal::print()
-{
-    cout << sign << integer << '.' << fraction;
+ostream& operator<<(ostream& out,BigReal& real){
+    out<<real.sign<<real.integer<<'.'<<real.fraction;
+    return out;
+}
+
+bool BigReal::operator >(BigReal& anotherReal) {
+    if(integer>anotherReal.integer){
+        return true;
+    }
+    else if(integer<anotherReal.integer){
+        return false;
+    }
+    else {
+        if(fraction>anotherReal.fraction){
+            return true;
+        }
+        return false;
+    }
+    return false;
 }

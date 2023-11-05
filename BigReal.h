@@ -11,6 +11,7 @@ public:
     BigReal();
     BigReal(string& num);
 
-    void print();
+    bool operator >(BigReal& anotherReal);
+    friend ostream& operator<<(ostream& out,BigReal& real);
 };
 

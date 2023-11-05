@@ -4,10 +4,9 @@ using namespace std;
 
 int main()
 {
-    string s;
-    cin >> s;
-    BigReal b(s);
-
-    b.print();
+    string s,s2;
+    cin >> s>>s2;
+    BigReal b(s),c(s2);
+    cout<<d;
     return 0;
 }
