@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-    string s= "123.345";
+    string s;
+    cin >> s;
     BigReal b(s);
 
     b.print();
