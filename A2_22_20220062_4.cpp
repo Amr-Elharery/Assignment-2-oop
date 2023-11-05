@@ -1,5 +1,4 @@
 // File: A2_22_20220062_4.cpp
-// Purpose: Files.
 // Author: Ashraf Abdallah Elmamouni.
 // Section: 22.
 // ID: 20220062.
