@@ -75,24 +75,31 @@ bool BigReal::operator > (BigReal& anotherReal) {
 
 
 bool BigReal::operator < (BigReal& anotherReal) {
-    if(integer>anotherReal.integer && sign == '+'){
+    if(integer>anotherReal.integer && anotherReal.sign == '+'){
         return false;
     }
     if(integer < anotherReal.integer && sign == '-' && anotherReal.sign == '-'){
         return false;
     }
-    if(integer > anotherReal.integer && sign == '-' && anotherReal.sign == '+'){
+    if(integer > anotherReal.integer && sign == '+' && anotherReal.sign == '-'){
         return true;
     }
 
-    if(fraction>anotherReal.fraction && sign == '+'){
+    if(fraction>anotherReal.fraction && anotherReal.sign == '+'){
         return false;
     }
-    if(fraction < anotherReal.fraction && sign == '-' && anotherReal.sign == '-'){
+    if(fraction < anotherReal.fraction && anotherReal.sign == '-' && sign == '-'){
         return false;
     }
-    if(fraction > anotherReal.fraction && sign == '-' && anotherReal.sign == '+'){
+    if(fraction > anotherReal.fraction && sign == '+' && anotherReal.sign == '-'){
         return true;
     }
-    return true;
+    return false;
+}
+
+bool BigReal::operator==(BigReal &anotherReal) {
+    if(sign == anotherReal.sign && integer == anotherReal.integer && fraction == anotherReal.fraction){
+        return true;
+    }
+    return false;
 }
