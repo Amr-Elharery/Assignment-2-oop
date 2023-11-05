@@ -1,4 +1,4 @@
-// File: solve problem 10.cpp
+// File: A2_22_20220062_10.cpp
 // Purpose: Files.
 // Author: Ashraf Abdallah Elmamouni.
 // Section: 22.
