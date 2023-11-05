@@ -51,31 +51,48 @@ ostream& operator<<(ostream& out,BigReal& real){
 }
 
 bool BigReal::operator > (BigReal& anotherReal) {
-    if(integer>anotherReal.integer){
+    if(integer>anotherReal.integer && sign == '+'){
         return true;
     }
-    else if(integer<anotherReal.integer){
+    if(integer < anotherReal.integer && sign == '-' && anotherReal.sign == '-'){
+        return true;
+    }
+    if(integer > anotherReal.integer && sign == '-' && anotherReal.sign == '+'){
         return false;
     }
-    else {
-        if(fraction>anotherReal.fraction){
-            return true;
-        }
+
+    if(fraction>anotherReal.fraction && sign == '+'){
+        return true;
+    }
+    if(fraction < anotherReal.fraction && sign == '-' && anotherReal.sign == '-'){
+        return true;
+    }
+    if(fraction > anotherReal.fraction && sign == '-' && anotherReal.sign == '+'){
         return false;
     }
+    return false;
 }
 
+
 bool BigReal::operator < (BigReal& anotherReal) {
-    if(integer<anotherReal.integer){
+    if(integer>anotherReal.integer && sign == '+'){
+        return false;
+    }
+    if(integer < anotherReal.integer && sign == '-' && anotherReal.sign == '-'){
+        return false;
+    }
+    if(integer > anotherReal.integer && sign == '-' && anotherReal.sign == '+'){
         return true;
     }
-    else if(integer>anotherReal.integer){
+
+    if(fraction>anotherReal.fraction && sign == '+'){
         return false;
     }
-    else {
-        if(fraction<anotherReal.fraction){
-            return true;
-        }
+    if(fraction < anotherReal.fraction && sign == '-' && anotherReal.sign == '-'){
         return false;
     }
+    if(fraction > anotherReal.fraction && sign == '-' && anotherReal.sign == '+'){
+        return true;
+    }
+    return true;
 }

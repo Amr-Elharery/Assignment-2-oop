@@ -8,6 +8,9 @@ int main()
     cin >> s>>s2;
     BigReal b(s),c(s2);
 
+    cout << "b " << b << endl;
+    cout << "c " << c << endl;
+
     if(b > c)
     {
         cout << "B Is > C" << endl;
