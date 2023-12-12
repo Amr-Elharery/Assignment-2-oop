@@ -15,6 +15,10 @@ public:
     bool operator < (BigReal& anotherReal);
     bool operator == (BigReal& anotherReal);
 
+    friend BigReal operator+( BigReal& real1,  BigReal& real2);
+    friend BigReal operator-( BigReal& real1,  BigReal& real2);
+
+
 
     friend ostream& operator<<(ostream& out,BigReal& real);
 };
