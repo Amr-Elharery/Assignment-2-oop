@@ -48,9 +48,7 @@ map<string, int> phishingKeywords = {
 };
 
 int main() {
-    string fileName;
-    cout << "Enter the name of the text file to scan:\n";
-    cin >> fileName;
+    string fileName = "E:\\Amr\\EDUCATION\\FCAI\\Second-Year\\First-semester\\OOP\\Assignments\\Assignment-2\\words.txt";
 
     ifstream file(fileName);
 
