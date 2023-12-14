@@ -49,7 +49,7 @@ map<string, int> phishingKeywords = {
 
 int main() {
     string fileName;
-    cout << "Enter the name of the text file to scan: ";
+    cout << "Enter the name of the text file to scan:\n";
     cin >> fileName;
 
     ifstream file(fileName);
